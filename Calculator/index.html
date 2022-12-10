@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="title">
+                        Calculator
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col display">
+                    <span id="last"></span>
+                    <span id="selection"></span>
+                </div>
+            </div>
+            <div class="row possibilities">
+                <div class="col-4 possible calcButton firstCol firstRow" id="1">
+                    1
+                </div>
+                <div class="col-4 possible calcButton firstRow" id="2">
+                    2
+                </div>
+                <div class="col-4 possible calcButton firstRow" id="3">
+                    3
+                </div>
+                <div class="col-4 calcButton lastCol firstRow" id="reset">
+                    Reset
+                </div>
+                <div class="col-4 possible calcButton firstCol" id="4">
+                    4
+                </div>
+                <div class="col-4 possible calcButton" id="5">
+                    5
+                </div>
+                <div class="col-4 possible calcButton" id="6">
+                    6
+                </div>
+                <div class="col-4 op calcButton lastCol" id="+">
+                    +
+                </div>
+                <div class="col-4 possible calcButton firstCol" id="7">
+                    7
+                </div>
+                <div class="col-4 possible calcButton" id="8">
+                    8
+                </div>
+                <div class="col-4 possible calcButton" id="9">
+                    9
+                </div>
+                <div class="col-4 op calcButton lastCol" id="-">
+                    -
+                </div>
+                <div class="col-4 possible calcButton firstCol lastRow" id=",">
+                    .
+                </div>
+                <div class="col-4 possible calcButton lastRow" id="0">
+                    0
+                </div>
+                <div class="col-4 op calcButton lastRow" id="/">
+                    /
+                </div>
+                <div class="col-4 op calcButton lastCol lastRow" id="x">
+                    x
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <a class="aBtn" id="result">
+                        =
+                    </a>
+                </div>
+                <div class="col-2">
+                    <a class="aBtn" id="delete">
+                        <--
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
