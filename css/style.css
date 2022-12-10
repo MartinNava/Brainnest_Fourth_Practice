@@ -1,0 +1,465 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Century+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Century Gothic';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/l/font?kit=Cn-vJt-LUxZV2ICofzrQFC41xsIia3OblBeU&skey=93c2fdf69b410576&v=v10) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*Root*/
+
+:root {
+    --container-max-width: 100%;
+    --css-exercise-container-max-width: 100%;
+    --col2-width: 100%;
+    --col2-flex: 0 0 100%;
+    --col3-width: 100%;
+    --col3-flex: 0 0 100%;
+    --col4-width: 100%;
+    --col4-flex: 0 0 100%;
+}
+
+/*Media Querys*/
+
+@media(min-width:720px) {
+    :root {
+        --col3-width: 50%;
+        --col3-flex: 0 0 50%;
+        --col4-width: 50%;
+        --col4-flex: 0 0 50%;
+    }
+}
+
+@media(min-width: 960px) {
+    :root {
+        --container-max-width: 900px;
+        --css-exercise-container-max-width: 576px;
+        --col2-width: 50%;
+        --col2-flex: 0 0 50%;
+        --col3-width: 33.3333%;
+        --col3-flex: 0 0 33.3333%;
+        --col4-width: 33.3333%;
+        --col4-flex: 0 0 33.3333%;
+    }
+}
+
+@media(min-width: 1264px) {
+    :root {
+        --container-max-width: 1185px;
+        --css-exercise-container-max-width: 758px;
+        --col4-width: 25%;
+        --col4-flex: 0 0 25%;
+    }
+}
+
+@media(min-width: 1904px) {
+    :root {
+        --container-max-width: 1785px;
+        --css-exercise-container-max-width: 1142px;
+    }
+}
+
+/*Keyframes*/
+
+@keyframes appear1 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes appear2 {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Styles*/
+
+.container {
+    width: 100%;
+    max-width: var(--container-max-width);
+    padding: 12px;
+    margin: auto;
+    font-family: 'Century Gothic', sans-serif;
+    transition: all 0.5s;
+}
+
+.row {
+    margin-top: 20pt;
+    margin-bottom: 20pt;
+    margin-left: -12px;
+    margin-right: -12px;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+}
+
+.col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+
+.col-2 {
+    flex: var(--col2-flex);
+    max-width: var(--col2-width);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-3 {
+    flex: var(--col3-flex);
+    max-width: var(--col3-width);
+    margin: auto;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-4 {
+    flex: var(--col4-flex);
+    max-width: var(--col4-width);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    font-size: 40pt;
+    font-weight: bold;
+    margin: 35pt 0;
+    z-index: 2;
+    position: relative;
+}
+
+/*HTML Practice*/
+
+.appear1 {
+    animation: appear1 3s;
+}
+
+.appear2 {
+    animation: appear2 6s;
+}
+
+.h1Title {
+    font-size: 24px;
+    text-align: center;
+    margin: 35pt 0;
+    z-index: 2;
+    position: relative;
+}
+
+.subtitle {
+    text-align: justify;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 15pt;
+}
+
+.subtitleDelimiter {
+    width: 65px;
+    height: 3pt;
+    background: #3bb3c1;
+    margin-top: -5px;
+    margin-bottom: 15pt;
+}
+
+.description {
+    text-align: justify;
+}
+
+.unorderedList,
+.orderedList {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -10px;
+}
+
+.unorderedList li,
+.orderedList li {
+    list-style-type: none;
+    margin: 15pt 10px;
+    text-align: center;
+}
+
+.liTitle {
+    list-style-type: none;
+}
+
+.mainImg {
+    width: 90%;
+    margin: 25pt auto;
+    border-radius: 15%;
+}
+
+.aBtn {
+    text-decoration: none;
+    background-color: #3bb3c1;
+    color: white;
+    padding: 10pt;
+    cursor: pointer;
+    border-radius: 15%;
+    transition: all 0.5s;
+}
+
+.aBtn:hover {
+    background-color: aquamarine;
+}
+
+.aboutImg {
+    width: 70%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.simpleBtnActionContainer {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.presentationOL {
+    text-align: justify;
+}
+
+.presentationDivider {
+    margin: 30pt auto;
+}
+
+.presentationSelectableOptions {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.presentationSelectableOptions:hover {
+    color: #3bb3c1;
+}
+
+/*CSS Practice*/
+
+.cssPracticeContainer {
+    background-color: black;
+    border-radius: 15pt;
+}
+
+.h1Color {
+    color: white;
+}
+
+.h2Color {
+    color: rgb(186, 185, 185);
+}
+
+.h3Color {
+    color: #818080;
+}
+
+.h4Color {
+    color: hsl(0, 0%, 29%);
+}
+
+.grayBG {
+    background-color: rgb(126, 126, 126);
+    color: white;
+}
+
+.lightGrayBG {
+    background-color: rgb(228, 228, 228);
+}
+
+.slogan {
+    border-bottom: 1px solid;
+}
+
+.mainCSSProject .container {
+    font-family: 'Roboto', sans-serif;
+}
+
+.firstContainer {
+    background-color: #1f2937;
+}
+
+.firstContainer .col {
+    text-align: left;
+}
+
+.firstContainer .firstTitle {
+    font-size: 48px;
+    font-weight: bolder;
+    color: #f9faf8;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.firstContainer .firstDescription {
+    font-size: 18px;
+    color: #e5e7eb;
+    text-align: left;
+    margin: 0;
+}
+
+.firstContainer .firstBtn {
+    color: white;
+    background-color: #3882f6;
+    box-shadow: none;
+    border: none;
+    padding: 5pt 20pt;
+    border-radius: 5pt;
+    margin-top: 5pt;
+    margin-bottom: 40pt;
+    text-align: left;
+}
+
+.firstContainer .imgPlaceholder {
+    color: white;
+    background-color: #454545;
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondContainer .square {
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 3px solid #3882f6;
+    border-radius: 10pt;
+    margin: auto;
+}
+
+.secondContainer .imageDescription {
+    opacity: 0.6;
+    font-size: 10pt;
+    margin-bottom: 75pt;
+}
+
+.thirdContainer {
+    background-color: #e5e7eb;
+}
+
+.secondContainer .container,
+.thirdContainer .container {
+    max-width: var(--css-exercise-container-max-width);
+}
+
+.thirdContainer .col {
+    text-align: left;
+    padding: 45pt 0;
+}
+
+.thirdContainer .quote {
+    font-size: 36px;
+    font-weight: lighter;
+    font-style: italic;
+    color: #1f2937;
+    margin-bottom: 0;
+}
+
+.thirdContainer .quoter {
+    text-align: right;
+    color: #1f2937;
+    font-weight: bolder;
+    margin-top: 0;
+}
+
+.fourthContainer {
+    color: white;
+}
+
+.fourthContainer .floatElement {
+    background-color: #3882f6;
+    border-radius: 5pt;
+    margin: 40pt 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fourthContainer .floatElement .floatElementDescription {
+    width: 66%;
+    display: inline-flex;
+    align-items: center;
+}
+
+.fourthContainer .floatElement .floatElementDescription p {
+    margin: 0;
+    text-align: left;
+}
+
+.fourthContainer .callTitle {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.fourthContainer .callSubtitle {
+    font-size: 10pt;
+}
+
+.fourthContainer .fourthBtn {
+    color: white;
+    background-color: #3882f6;
+    box-shadow: none;
+    border: 1px solid white;
+    padding: 5pt 20pt;
+    border-radius: 5pt;
+    margin: 40pt 0 40pt;
+    text-align: left;
+}
+
+.copy {
+    text-align: center;
+    color: #e5e7eb;
+    margin: 15pt auto;
+}
+
+.headerLogo {
+    font-size: 24px;
+    font-weight: 500;
+    color: #f9faf8;
+}
+
+.headerTabs {
+    margin-right: 25pt;
+    color: white;
+}
+
+.gameBoard {
+    width: 60%;
+    max-width: 60%;
+    margin: auto;
+}
+
+#resultsDIV {
+    text-align: center;
+}

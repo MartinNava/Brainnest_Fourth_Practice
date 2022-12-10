@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="title">
+                        Papper, Scissors or Rock
+                    </p>
+                </div>
+                <div class="col">
+                    <div class="subtitle">
+                        Shall we begin?
+                    </div>
+                    <div class="subtitleDelimiter"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-2">
+                    <img src="./img/rock.jpg" class="gameBoard" id="playerImg">
+                </div>
+                <div class="col-2">
+                    <img src="./img/rock.jpg" class="gameBoard"
+                        id="computerImg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <a class="playBtn aBtn" id="scrs">
+                        Scissors
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a class="playBtn aBtn" id="rck">
+                        Rock
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a class="playBtn aBtn" id="ppr">
+                        Papper
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="playLegend"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="description">
+                        ¡Let's follow the scores!
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p class="description">
+                        Player:
+                    </p>
+                    <p class="description" id="playerScr">
+                        0
+                    </p>
+                </div>
+                <div class="col-2">
+                    <p class="description">
+                        Computer:
+                    </p>
+                    <p class="description" id="computerScr">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="description" id="resultsDIV">
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
